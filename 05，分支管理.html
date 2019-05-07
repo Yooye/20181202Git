@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		1，分支的含义
+		
+		2，创建新的分支
+			（1）git branch 【分支名称】     创建分支
+			（2）HEAD -> master,  头指针确定当前操作的是哪个分支
+			（3）使用git branch dev 为当前项目创建一个dev分支
+			
+		3，在分支上进行开发
+			（1）git checkout dev  将HEAD指向dev分支，这样我们后续commit就会针对dev分支进行操作，不会影响master分支
+			（2）在dev分之下，做两次代码修改及commit操作
+			（3）再次使用git checkout master切换回主分支，观察代码文件的变化，
+				主要观察在dev分支下执行的commit操作，会不会影响master分支
+				
+		4，查看当前分支状态    git branch -av
+		
+		
+		5，合并分支，将dev分支下的代码合并至master分支
+			（1）git checkout master将HEAD指向master分支
+			（2）git merge dev  将dev分支合并至master分支
+			（3）默认通过Fast-Forword（快进）方式进行合并
+			
+		6，删除分支
+			（1）git checkout master将HEAD指向master分支
+			（2）git branch -d dev 删除dev分支
+	</body>
+</html>

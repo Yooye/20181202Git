@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		1，从github克隆已有项目
+			git clone github仓库地址
+			
+		2，在github上新建一个新的Repository（仓库）
+		
+		3，在本地电脑生成一个SSH的key，配置给拥有第二步仓库的github账号
+			（1）本地生成ssh的key
+				ls -al ~/.ssh  查看当前电脑有没有ssh的key【电脑默认没有.ssh】
+				
+				ssh-keygen -t rsa -b 4096 -C "github账号邮箱"   生成ssh的key文件
+
+			（2）获取.ssh中的公钥
+				cd ~/.ssh  进入文件
+				cat id_rsa.pub 查看公钥信息
+				如果看到了一大堆乱码一样的字符串，说明我们就看到了该公钥
+			
+			（3）把key配置到github账号
+		
+		
+		4，将本地git所管理的代码，同步至github
+			（1）让本地与线上关联
+				git remote add mypro 【线上仓库的SSH路径】
+				备注：mypro是我们后续给仓库提交代码时的代名词
+			
+			（2）将线下的git版本的master分支，与线上的github版本的master进行合并
+				 git merge --allow-unrelated-histories mypro/master
+				 
+			（3）合并后，观察本地仓库与线上仓库的代码状态，可使用gitk
+			
+			（4）将线下的所有代码及版本信息，提交至线上
+				git push mypro
+
+
+	</body>
+</html>

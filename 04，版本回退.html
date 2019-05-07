@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		版本回退，可以让版本及其代码，回退到一个历史的commit操作下：
+		1，git reset --hard 【第二次的commit_id】      //从第三次commit 回退到 第二次commit
+		
+		2，反向回退，如果命令窗尚未关闭，可以回退到第一步回退之前的状态  
+			git reset --hard 【第三次commit_id】  //从第二次commit 重回到 第三次commit
+			
+		3，git reflog 命令可以查看所有的操作历史，可以找到版本回退相关历史信息
+		
+		4，使用gitk打开可视化版本界面，里面能够查看每次版本变动的代码位置
+	</body>
+</html>

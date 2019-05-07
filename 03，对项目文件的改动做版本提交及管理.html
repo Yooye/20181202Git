@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		一，版本提交的基本操作
+			1，理解工作区，暂存区，版本区的概念
+			
+			2，在工作区中我们经常执行的操作有（新增文件、编辑文件等），【未追踪】
+			
+			3，第二步的这些操作，如果想被git记录下来，需要使用  【已添加索引】
+				git add index.html
+			  将该文件的改动放至暂存区
+			  
+			4，再次执行 git commit -m'描述文字' 将本次操作纳入版本区 
+			
+			5，可以使用git status命令，查看当前工作区中文件的版本状态
+			
+			6，git log 查看所有版本提交历史
+		
+		二，练习执行两次commit操作
+			（1）新增index.html , 在每次操作后，都执行git status查看版本状态
+			（2）新增style.css并编辑index.html，绘制一个正方形的div盒子
+			（3）执行git log查看结果
+	</body>
+</html>
